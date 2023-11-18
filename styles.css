@@ -66,6 +66,7 @@ body {
 .container {
   background-color: var(--Dark-desaturated-blue);
   border-radius: 8px;
+  overflow: hidden;
   margin: 40px 20px;
   display: flex;
   flex-direction: column;
@@ -75,62 +76,66 @@ body {
 .content_subcontainer {
   display: flex;
   flex-direction: column;
-  padding: 1.5rem;
+  padding: 2.5rem;
   color: var(--White);
 }
 
 .image_heading {
-  border-radius: 8px 8px 0 0;
-}
-/* wiil make image purple */
-
-picture {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  position: relative;
-}
-
-picture::before {
-  content: "";
-  position: absolute;
-  width: 100%;
+  object-fit: cover;
   height: 100%;
-  background-color: #c796e5;
+}
+
+.image_subcontainer {
+  background-color: rgb(235 124 255 / 80%);
+}
+
+.image_heading {
   mix-blend-mode: multiply;
 }
-/* wiil make image purple */
 
 /* styling*/
 h1 {
-  padding: 10px 0;
   line-height: 1em;
-  font-size: 1.6rem;
-}
-
-.first_paragraph {
-  padding: 8px 0 20px 0;
-  font-family: "Inter";
-  color: var(--Slightly-transparent-paragraph-main);
-  line-height: 1.6em;
-  font-size: 0.9rem;
-}
-.stats_group {
-  padding: 10px 0;
-}
-
-.stats_group p {
-  color: var(--Slightly-transparent-paragraph);
-}
-
-h2 {
-  padding-bottom: 8px;
-  font-family: Inter;
+  font-size: 1.3rem;
 }
 
 span {
   color: var(--Soft-violet);
+}
+
+.first_paragraph {
+  margin: 20px 0 20px 0;
+  font-family: "Lexend Deca";
+  color: var(--Slightly-transparent-paragraph-main);
+  line-height: 1.6em;
+  font-size: 0.8rem;
+}
+
+.stats_group {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  row-gap: 20px;
+  padding: 0;
+}
+
+.stats_li {
+  font-family: Inter;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.stats_li:nth-child(3) {
+  text-transform: uppercase;
+}
+
+.stats_p {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--Slightly-transparent-paragraph);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 
 /* styling */
@@ -138,25 +143,28 @@ span {
 @media (min-width: 43.75rem) {
   .container {
     flex-direction: row;
-    max-width: 1000px;
-    margin: 60px;
+    max-width: 780px;
+    margin: 0;
+  }
+
+  body {
+    margin: 0;
   }
 
   .image_subcontainer {
-    flex: 0 1 50%;
+    flex: 0 0 50%;
     order: 2;
   }
 
   .content_subcontainer {
     flex: 0 0 50%;
+    text-align: left;
   }
 
-  .image_heading {
-    border-radius: 0 8px 8px 0;
-  }
-
-  .stats_container {
-    display: flex;
-    column-gap: 18px;
+  .stats_group {
+    flex-direction: row;
+    column-gap: 20px;
+    margin: 0;
+    margin-top: auto;
   }
 }
