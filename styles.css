@@ -86,11 +86,12 @@ body {
 }
 
 .image_subcontainer {
-  background-color: rgb(235 124 255 / 80%);
+  background-color: var(--Soft-violet);
 }
 
 .image_heading {
   mix-blend-mode: multiply;
+  opacity: 0.7;
 }
 
 /* styling*/
