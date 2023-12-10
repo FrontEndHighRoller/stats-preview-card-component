@@ -3,6 +3,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body,
@@ -49,10 +51,6 @@ picture {
   --Slightly-transparent-paragraph: hsla(0, 0%, 100%, 0.6); /* (stat headings)*/
 }
 
-footer {
-  display: none;
-}
-
 body {
   display: flex;
   justify-content: center;
@@ -65,9 +63,9 @@ body {
 
 .container {
   background-color: var(--Dark-desaturated-blue);
-  border-radius: 8px;
+  border-radius: 0.5rem;
   overflow: hidden;
-  margin: 40px 20px;
+  margin: 2.5rem 1.25rem;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -76,7 +74,7 @@ body {
 .content_subcontainer {
   display: flex;
   flex-direction: column;
-  padding: 2.5rem;
+  padding: 2rem;
   color: var(--White);
 }
 
@@ -96,8 +94,8 @@ body {
 
 /* styling*/
 h1 {
-  line-height: 1em;
-  font-size: 1.3rem;
+  line-height: 1.3em;
+  font-size: 1.45rem;
 }
 
 span {
@@ -105,7 +103,7 @@ span {
 }
 
 .first_paragraph {
-  margin: 20px 0 20px 0;
+  margin: 1.25rem 1rem;
   font-family: "Lexend Deca";
   color: var(--Slightly-transparent-paragraph-main);
   line-height: 1.6em;
@@ -116,7 +114,7 @@ span {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  row-gap: 20px;
+  row-gap: 1.25rem;
   padding: 0;
 }
 
@@ -144,7 +142,7 @@ span {
 @media (min-width: 43.75rem) {
   .container {
     flex-direction: row;
-    max-width: 780px;
+    max-width: 55rem;
     margin: 0;
   }
 
@@ -160,11 +158,16 @@ span {
   .content_subcontainer {
     flex: 0 0 50%;
     text-align: left;
+    padding: 3rem 4rem 3.2rem;
+  }
+
+  .first_paragraph {
+    margin: 1.25rem 0;
   }
 
   .stats_group {
     flex-direction: row;
-    column-gap: 20px;
+    column-gap: 2.25rem;
     margin: 0;
     margin-top: auto;
   }
